@@ -1,6 +1,7 @@
 package com.pluto.base.Handlers;
 
 import com.pluto.base.commands.Informational.InfoCommand.InfoCommand;
+import com.pluto.base.commands.Utilities.Date.CurrentTime.CurrentTime;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -11,6 +12,7 @@ public class CommandHandler extends ListenerAdapter {
     }
     public void initCommandHandler(){
         jda.addEventListener(new InfoCommand());
+        jda.addEventListener(new CurrentTime());
     }
 
 }

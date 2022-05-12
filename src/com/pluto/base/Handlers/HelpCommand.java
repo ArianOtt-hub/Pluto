@@ -1,4 +1,4 @@
-package com.pluto.base.commands.Informational;
+package com.pluto.base.Handlers;
 
 import com.pluto.base.commands.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

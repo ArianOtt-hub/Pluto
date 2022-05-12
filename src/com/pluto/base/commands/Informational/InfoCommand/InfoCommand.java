@@ -29,7 +29,7 @@ public class InfoCommand extends Command {
 
                 MessageChannel channel = event.getGuildChannel();
 
-                channel.sendMessageEmbeds(embed.eb.build()).queue();
+                channel.sendMessageEmbeds(embed.eb1.build()).queue();
                 channel.sendMessage("**Requested by: "+event.getAuthor().getAsTag()+"**").queue();
 
 
