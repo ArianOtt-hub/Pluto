@@ -1,10 +1,8 @@
 package com.pluto.base.Handlers;
 
-import com.pluto.base.commands.Informational.InfoCommand;
+import com.pluto.base.commands.Informational.InfoCommand.InfoCommand;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-
-import java.util.EventListener;
 
 public class CommandHandler extends ListenerAdapter {
     private JDA jda;
