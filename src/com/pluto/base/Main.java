@@ -7,6 +7,8 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.security.auth.login.LoginException;
+ /**@author Arian Ott
+  * @author ottar **/
 
 public class Main extends ListenerAdapter  {
     public static JDA jda;
@@ -19,5 +21,4 @@ public class Main extends ListenerAdapter  {
         handler.init();
 
     }
-
 }
