@@ -18,7 +18,9 @@ public class Main extends ListenerAdapter  {
 
 	jda = JDABuilder.createDefault(Token.getToken()).build().awaitReady();
         Handler handler = new Handler(jda);
+
         handler.init();
 
     }
+
 }

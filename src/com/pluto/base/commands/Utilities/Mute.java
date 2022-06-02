@@ -23,7 +23,7 @@ public class Mute extends Command {
     public Mute() {
 
     }
-
+    String id;
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
@@ -35,8 +35,9 @@ public class Mute extends Command {
             message.delete().queue();
             channel.sendTyping().completeAfter(3, TimeUnit.SECONDS);
             channel.sendMessage("For how long do you want to mute this person?").queue();
-
+ id =event.getChannel().getLatestMessageId();
         }
+
     }
 
     @Override
@@ -50,7 +51,8 @@ public class Mute extends Command {
                 event.deferReply(true).queue();
                 Mentions mentions = optionMapping.getMentions();
                 String a = mentions.toString();
-                event.getMember(a).timeoutFor(10, TimeUnit.MINUTES).queue();
+                event.getMember().timeoutFor(10, TimeUnit.MINUTES).queue();
+              //  event.getMember(a).timeoutFor(10, TimeUnit.MINUTES).queue();
             } catch (IllegalStateException e) {
                 event.getChannel().sendMessage("Oups something went wrong.. <@" + event.getMember().getIdLong() + "> \nIs this message sent into the discord server? Try it again there!").queue();
             }
